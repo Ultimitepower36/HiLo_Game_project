@@ -6,7 +6,13 @@ Console.WriteLine("Welcome to Hilo!");
 class Game{
     static void Main(string[] args)
     {
-        var ProtoDeck = Dealer.Deck();
+        Dealer Cards = new Dealer();
+        var ProtoDeck = Cards.Deck();
+
+        while (!WinOrLoss())
+        {
+           
+        }
 
         Console.WriteLine("Good game. Thanks for playing!");
 
@@ -14,8 +20,8 @@ class Game{
 
     static bool WinOrLoss()
     {
-
-
+        
+        return true;
     }
     
 
