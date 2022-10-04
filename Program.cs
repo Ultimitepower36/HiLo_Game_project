@@ -10,10 +10,13 @@ class Game{
         // Define the Cards object as the new Dealer Class
         Dealer Cards = new Dealer();
         var ProtoDeck = Cards.Deck();
+        var Points = 300;
 
-        while (!WinOrLoss())
+        while (WinOrLoss())
         {
-           
+            var random = new Random();
+            int Answer = random.Next(ProtoDeck.Count);
+            
         }
 
         Console.WriteLine("Good game. Thanks for playing!");
@@ -21,8 +24,7 @@ class Game{
     }
 
     static bool WinOrLoss()
-    {
-        
+    {   
         return true;
     }
     
