@@ -2,5 +2,25 @@
 Console.WriteLine("Hello, World!");
 Console.WriteLine("Welcome to Hilo!");
 
- var ProtoDeck = Dealer.Deck();
+
+class Game{
+    static void Main(string[] args)
+    {
+        var ProtoDeck = Dealer.Deck();
+
+        Console.WriteLine("Good game. Thanks for playing!");
+
+    }
+
+    static bool WinOrLoss()
+    {
+
+
+    }
+    
+
+}
+
+
+
  
