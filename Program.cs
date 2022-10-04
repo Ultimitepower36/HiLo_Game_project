@@ -16,10 +16,15 @@ class Game{
 
         while (GameOver())
          {
+            
+            // Made New Variable Random into a new Object random
+            // New Varible Start will be an integer
             var random = new Random();
             int Start = random.Next(ProtoDeck.Count);
+            // Write out Game Options
             Console.WriteLine($"The card is: {Start}");
             Console.WriteLine("Higher or lower? (h/l)");
+            // Read inputs from User
             string? input = Console.ReadLine();
             int Next = random.Next(ProtoDeck.Count);
 
@@ -27,12 +32,19 @@ class Game{
             Points = Cards.Checks(TrueOrFalse, Points);
             GameOver(Points);
         }
-
+        // Ending script of Code
         Console.WriteLine($"Your final score is {Points}.");
         Console.WriteLine("Good game. Thanks for playing!");
 
     }
 
+        //Boolean Logic. Determines whether or not Card is Higher or Lower
+        // Start is 1st Card Drawn from Deck
+        // Input is the User's Guess whether Higher or Lower
+        // Next is 2nd Card Drawn from Deck
+
+        // Probelms
+        // Define H and L 
     static bool WinOrLoss(string input, int Start, int Next)
     {   
         if ((Next > Start) && (input = 'h')){
@@ -53,6 +65,13 @@ class Game{
         }
     }
 
+        // Determinmes how many points the User has
+        // Also determines if they would like to stop playing
+        // Points is How many total Points the user has
+
+
+        // Problems
+        // Y and N determine whether or not to continue
     static bool GameOver(int Points)
     {
         if (Points <= 0){
