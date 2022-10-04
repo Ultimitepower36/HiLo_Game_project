@@ -13,12 +13,14 @@ class Game{
         var Points = 300;
 
         while (WinOrLoss())
-        {
+         {
             var random = new Random();
             int Answer = random.Next(ProtoDeck.Count);
-            
+
+
         }
 
+        Console.WriteLine($"Your final score is {Points}.");
         Console.WriteLine("Good game. Thanks for playing!");
 
     }
