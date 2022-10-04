@@ -8,7 +8,13 @@ class Dealer {
         return spaces;
     }
 
-    public void Checks() {
-
+    public void Checks(bool TrueOrFalse, int Points) {
+        if (TrueOrFalse == true){
+            Points += 100;
+        }
+        else if (TrueOrFalse == false){
+            Points -= 75;
+        }
+        return;
     }
 }
