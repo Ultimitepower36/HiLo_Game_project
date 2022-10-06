@@ -29,6 +29,7 @@ class Game{
 
             var TrueOrFalse = WinOrLoss(input, Start, Next);
             Points = Check.Checks(TrueOrFalse, Points);
+            Console.WriteLine($"Your score is: {Points}");
             GameOver(Points);
         }
         // Ending script of Code

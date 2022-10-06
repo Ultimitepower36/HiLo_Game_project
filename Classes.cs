@@ -21,9 +21,11 @@ class Dealer {
     public int Checks(bool TrueOrFalse, int Points) {
         if (TrueOrFalse == true){
             Points += 100;
+            Console.WriteLine("You got it right! You earned 100 points!");
         }
         else if (TrueOrFalse == false){
             Points -= 75;
+            Console.WriteLine("You were wrong. You lost 75 points.");
         }
         return Points;
     }
