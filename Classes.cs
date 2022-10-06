@@ -18,13 +18,13 @@ class Dealer {
 
     // Problems
     // None yet
-    public void Checks(bool TrueOrFalse, int Points) {
+    public int Checks(bool TrueOrFalse, int Points) {
         if (TrueOrFalse == true){
             Points += 100;
         }
         else if (TrueOrFalse == false){
             Points -= 75;
         }
-        return;
+        return Points;
     }
 }

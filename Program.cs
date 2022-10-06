@@ -11,11 +11,10 @@ class Game{
         Dealer Cards = new Dealer();
         var ProtoDeck = Cards.Deck();
         Dealer Check = new Dealer();
-        var X = Check.Checks();
         var Points = 300;
 
-        while (GameOver())
-         {
+        while(GameOver(Points) != false)
+        {
             
             // Made New Variable Random into a new Object random
             // New Varible Start will be an integer
@@ -29,7 +28,7 @@ class Game{
             int Next = random.Next(ProtoDeck.Count);
 
             var TrueOrFalse = WinOrLoss(input, Start, Next);
-            Points = Cards.Checks(TrueOrFalse, Points);
+            Points = Check.Checks(TrueOrFalse, Points);
             GameOver(Points);
         }
         // Ending script of Code
@@ -59,7 +58,7 @@ class Game{
         else if ((Next < Start) && (input = 'l')){
             return true;
         }
-        else if (Next == Start){
+        else{
             Console.WriteLine("Both numbers were the same, you win by default.");
             return true;
         }
@@ -77,7 +76,7 @@ class Game{
         if (Points <= 0){
             return false;
         }
-        else if(Points > 0){
+        else{
             Console.WriteLine("Do you want to play again? (y/n)");
             string? input = Console.ReadLine();
             if (input = 'y'){
