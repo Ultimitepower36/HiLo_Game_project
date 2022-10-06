@@ -45,9 +45,6 @@
         // Start is 1st Card Drawn from Deck
         // Input is the User's Guess whether Higher or Lower
         // Next is 2nd Card Drawn from Deck
-
-        // Probelms
-        // Define H and L 
     static bool WinOrLoss(string input, int Start, int Next)
     {   
         if ((Next > Start) && (input == "h")){
@@ -71,10 +68,6 @@
         // Determinmes how many points the User has
         // Also determines if they would like to stop playing
         // Points is How many total Points the user has
-
-
-        // Problems
-        // Y and N determine whether or not to continue
     static bool GameOver(int Points)
     {
         if (Points <= 0){
