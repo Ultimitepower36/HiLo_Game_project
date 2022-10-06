@@ -46,16 +46,16 @@ class Game{
         // Define H and L 
     static bool WinOrLoss(string input, int Start, int Next)
     {   
-        if ((Next > Start) && (input = 'h')){
+        if ((Next > Start) && (input == "h")){
             return true;
         }
-        else if ((Next > Start) && (input = 'l')){
+        else if ((Next > Start) && (input == "l")){
             return false;
         }
-        else if ((Next < Start) && (input = 'h')){
+        else if ((Next < Start) && (input == "h")){
             return false;
         }
-        else if ((Next < Start) && (input = 'l')){
+        else if ((Next < Start) && (input == "l")){
             return true;
         }
         else{
@@ -79,10 +79,10 @@ class Game{
         else{
             Console.WriteLine("Do you want to play again? (y/n)");
             string? input = Console.ReadLine();
-            if (input = 'y'){
+            if (input == "y"){
                 return true;
             }
-            else if (input = 'n'){
+            else if (input == "n"){
                 return false;
             }
             else{
