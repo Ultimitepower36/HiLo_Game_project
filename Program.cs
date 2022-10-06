@@ -1,18 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Welcome to Hilo!");
-
-class Game{
+﻿class Game{
     static void Main(string[] args)
     {   
         // Call Dealer from Classes.cs to create Cards (Object)
         // Define the Cards object as the new Dealer Class
+        Console.WriteLine("Welcome to Hilo!");
         Dealer Cards = new Dealer();
         var ProtoDeck = Cards.Deck();
         Dealer Check = new Dealer();
         var Points = 300;
+        var Play = true;
 
-        while(GameOver(Points) != false)
+        while(Play != false)
         {
             
             // Made New Variable Random into a new Object random
@@ -29,7 +27,13 @@ class Game{
             var TrueOrFalse = WinOrLoss(input, Start, Next);
             Points = Check.Checks(TrueOrFalse, Points);
             Console.WriteLine($"Your score is: {Points}");
-            GameOver(Points);
+            var resulting = GameOver(Points);
+            if (resulting == false){
+                Play = false;
+            }
+            else{
+                Play = true;
+            }
         }
         // Ending script of Code
         Console.WriteLine($"Your final score is {Points}.");
